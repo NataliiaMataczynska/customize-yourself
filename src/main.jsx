@@ -1,6 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './styles/main.scss';
 // import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from 'firebase/analytics';
 //
@@ -19,8 +21,11 @@ import App from './App.jsx';
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+ReactDOM.render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </React.StrictMode>,
+    document.getElementById('root')
+);

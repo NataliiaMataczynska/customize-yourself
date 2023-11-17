@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/display.scss";
-export default function  Settings({color, text, hundleImageClick, handleImageChange, ref, image}){
+
+export default function  Settings({color, text, textColor, hundleImageClick, handleImageChange, ref, image}){
     return (
         <div className=' container jacket-options'>
             <div className="jacket-option jacket-color ">
@@ -54,12 +54,11 @@ export default function  Settings({color, text, hundleImageClick, handleImageCha
             </div>
             <div className="jacket-option">
                 <h4 >color tekstu</h4>
-                <select className="form-control form-control-sm mb-2 ">
-                    <option>withe</option>
-                    <option>withe</option>
-                    <option>black</option>
-                    <option>red</option>
-                    <option>blue</option>
+                <select onChange={textColor} className="form-control form-control-sm mb-2 ">
+                    <option value="white">withe</option>
+                    <option value="black">black</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
                 </select>
             </div>
             <h4 ></h4>

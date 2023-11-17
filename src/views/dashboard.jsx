@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import Display from "./display.jsx";
 import Settings from "./settings.jsx";
 import ImgUpload from "./imgUpload.jsx"
-import "../styles/dashboard.scss";
+
 
 
 export default function Dashboard() {
     const [displayState, setDisplayState] = useState({
         colorOfClothes: 'src/assets/images/front.png',
-        upperText: 'this is upper text',
+        upperText: 'this is text',
         nameTmg: '',
-        url: ""
+        url: "",
+        textColor: 'black'
     });
     const [selectedFile, setSelectedFile] = useState(null);
 
@@ -55,6 +56,11 @@ export default function Dashboard() {
         }
     };
 
+    const handleTextColor = (e) => {
+        const newTextColor = e.target.value;
+        setDisplayState({ ...displayState, textColor: newTextColor });
+    };
+
     return (
         <section className="container">
             <div className="row row-up">
@@ -62,6 +68,7 @@ export default function Dashboard() {
                     <Settings
                         color={handlecolorOfClothes}
                         text={handleUpperText}
+                        textColor={handleTextColor}
                     />
                 </div>
             </div>

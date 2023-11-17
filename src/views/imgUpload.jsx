@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/display.scss";
+
 export default function ImgUpload({ hundleImageClick, handleImageChange, ref, image}){
     return (
         <div className='card bg-light container'>
