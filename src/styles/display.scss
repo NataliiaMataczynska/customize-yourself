@@ -1,0 +1,33 @@
+.imgTshert {
+  position: relative;
+
+}
+
+.nameText {
+  position: absolute;
+  top: 190px;
+  left:210px
+}
+
+.nameText img{
+  max-width: 300px;
+  border: red solid 6px;
+}
+.nameText p {
+  font-family: impact, Charcoal, sans-serif;
+  color: red;
+}
+.lowerText p {
+  margin-top: 10px;
+}
+.tshirt-color {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.jacket-color img {
+  width: 3rem;
+  height: 3rem;
+}
