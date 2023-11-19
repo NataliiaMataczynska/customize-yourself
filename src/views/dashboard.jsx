@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import Display from "./display.jsx";
 import Settings from "./settings.jsx";
 import ImgUpload from "./imgUpload.jsx";
@@ -68,32 +70,37 @@ export default function Dashboard() {
     }
 
     return (
-        <section className="container">
-            <div className="row row-up">
-                <div className="setings column"
-                     onDrop={handleDrop}
-                     onDragOver={allowDrop}>
-                    <Settings
-                        color={handlecolorOfClothes}
-                        text={handleUpperText}
-                        textColor={handleTextColor}
-                    />
+        <DndProvider backend={HTML5Backend}>
+            <section className="container">
+                <div className="row row-up">
+                    <div className="setings column"
+                         onDrop={handleDrop}
+                         onDragOver={allowDrop}>
+                        <Settings
+                            color={handlecolorOfClothes}
+                            text={handleUpperText}
+                            textColor={handleTextColor}
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className="row row-down">
-                <div className="display column">
-                    <Display displayState={displayState} />
+                <div className="row row-down">
+                    <div className="display column">
+                        <Display displayState={displayState}
+                                 image={image}
+                        />
+
+                    </div>
+                    <div className="file-upload">
+                        <form>
+                            <input type="file" onChange={handleInput} />
+                        </form>
+                        <ImgUpload
+                            handleImageChange={handleImageUpload}
+                            image={image}
+                        />
+                    </div>
                 </div>
-                <div className="file-upload">
-                    <form>
-                        <input type="file" onChange={handleInput} />
-                    </form>
-                    <ImgUpload
-                        handleImageChange={handleImageUpload}
-                        image={image}
-                    />
-                </div>
-            </div>
-        </section>
+            </section>
+        </DndProvider>
     );
 }
