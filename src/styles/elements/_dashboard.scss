@@ -20,7 +20,6 @@
     flex-direction: row;
     .column {
       width: 100%;
-      border: 1px solid green;
       display: flex;
       justify-content: space-around;
     }
@@ -51,6 +50,9 @@
   align-items: unset;
   justify-content: center;
   width: 100%;
+  .color-choose {
+    flex-direction: row;
+  }
   .jacket-option {
     flex-direction: column;
     align-items: center;

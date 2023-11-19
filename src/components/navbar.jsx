@@ -12,7 +12,8 @@ export default function Navbar() {
     return (
         <div>
             <nav className="navbar">
-                <div className="navbar-logo">Clay on board</div>
+                {/*<div className="navbar-logo">Clay on board</div>*/}
+                <img className="logo-img" src="src/assets/images/logo1.png" alt="" />
                 <ul className="navbar-items">
                     <li className="navbar-item">
                         <Link to="/" className="navbar-link">STRONA GŁOWNA</Link>

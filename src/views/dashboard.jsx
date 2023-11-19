@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Display from "./display.jsx";
 import Settings from "./settings.jsx";
-import ImgUpload from "./imgUpload.jsx"
-
-
+import ImgUpload from "./imgUpload.jsx";
 
 export default function Dashboard() {
     const [displayState, setDisplayState] = useState({
@@ -13,7 +11,6 @@ export default function Dashboard() {
         url: "",
         textColor: 'black'
     });
-    const [selectedFile, setSelectedFile] = useState(null);
 
     const handlecolorOfClothes = (e) => {
         const newColor = e.target.id;
@@ -26,14 +23,8 @@ export default function Dashboard() {
             case 'black':
                 imageSrc = 'src/assets/images/front%20black.png';
                 break;
-            case 'grey':
-                imageSrc = 'src/assets/images/front%20black.png';
-                break;
             case 'blue':
                 imageSrc = 'src/assets/images/front%20blue.png';
-                break;
-            case 'red':
-                imageSrc = 'src/assets/images/front%20black.png';
                 break;
             default:
                 imageSrc = 'src/assets/images/front.png';
@@ -52,7 +43,8 @@ export default function Dashboard() {
     const handleImageUpload = (e) => {
         if (e.target.files[0]){
             const image = (e.target.files[0]);
-            //nie mam pojęcia co ma być
+            const imageUrl = URL.createObjectURL(image);
+            setDisplayState({ ...displayState, url: imageUrl });
         }
     };
 
@@ -60,11 +52,27 @@ export default function Dashboard() {
         const newTextColor = e.target.value;
         setDisplayState({ ...displayState, textColor: newTextColor });
     };
+    const handleDrop = (e) => {
+        e.preventDefault();
+        const draggedImage = e.dataTransfer.getData("text");
+        setDisplayState({ ...displayState, url: draggedImage });
+    };
+
+    const allowDrop = (e) => {
+        e.preventDefault();
+    };
+
+    const [image, setImage] = useState(null);
+    function handleInput(e) {
+        setImage(URL.createObjectURL(e.target.files[0]));
+    }
 
     return (
         <section className="container">
             <div className="row row-up">
-                <div className="setings column">
+                <div className="setings column"
+                     onDrop={handleDrop}
+                     onDragOver={allowDrop}>
                     <Settings
                         color={handlecolorOfClothes}
                         text={handleUpperText}
@@ -77,12 +85,15 @@ export default function Dashboard() {
                     <Display displayState={displayState} />
                 </div>
                 <div className="file-upload">
+                    <form>
+                        <input type="file" onChange={handleInput} />
+                    </form>
                     <ImgUpload
-                        fileUpload={handleImageUpload}
+                        handleImageChange={handleImageUpload}
+                        image={image}
                     />
                 </div>
             </div>
-
         </section>
     );
 }

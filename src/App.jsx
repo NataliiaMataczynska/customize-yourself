@@ -9,13 +9,12 @@ import Contact from './views/contact';
 import YourProject from './views/yourProject';
 import './styles/main.scss';
 import Submenu from "./components/submenu.jsx";
-import Header from "./views/header.jsx";
 
 export default function App() {
     return (
         <>
-            <html className="App">
-                <Header />
+            <div className="App">
+
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -26,7 +25,7 @@ export default function App() {
                                } /> </Home>} />
                     <Route path="/kontakt" element={<Contact />} />
                 </Routes>
-            </html>
+            </div>
         </>
     );
 }

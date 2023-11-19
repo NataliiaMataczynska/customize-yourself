@@ -7,6 +7,8 @@ export default function Display({ displayState }) {
         color: textColor,
     };
 
+
+
     return (
         <div className='card card-content'>
             <div className='imgJacket text-center'>
@@ -16,7 +18,7 @@ export default function Display({ displayState }) {
                 <div className="upperText">
                     <p style={textStyle}>{upperText}</p>
                 </div>
-                <img src='src/assets/images/choper.png' alt="img-choper" />
+                {/*<img src='src/assets/images/choper.png' alt="img-choper" />*/}
             </div>
         </div>
     )
