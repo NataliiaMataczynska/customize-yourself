@@ -1,29 +1,11 @@
-import React from "react";
-import { useDrag } from 'react-dnd';
+import React from 'react';
 
-export default function ImgUpload({ handleImageChange, image }) {
-
-    const [{ isDragging }, drag] = useDrag({
-        type: 'image',
-        item: { type: 'image', image: 'src/assets/images/upload-image.png' },
-        end: (item, monitor) => {
-            const dropResult = monitor.getDropResult();
-            if (item && dropResult) {
-                setImage(item.image);
-            }
-        },
-        collect: (monitor) => ({
-            isDragging: monitor.isDragging(),
-        }),
-    });
-
+export default function ImgUpload({ image, onDragStart, boxStyle }) {
     return (
-        <div className='card upload-content container' ref={drag} >
+        <div className='card upload-content container' draggable onDragStart={onDragStart} style={boxStyle}>
             <h4>Upload Image</h4>
-
-            { image && <img src={image} ref={drag} style={{width: "20rem", opacity: isDragging ? 0.5 : 1}} alt="" />}
+            {image && <img src={image} style={{ width: '20rem', position: 'absolute' }} alt="" />}
             {!image && <img src="src/assets/images/upload-image.png" alt="" />}
-
         </div>
     );
 }
