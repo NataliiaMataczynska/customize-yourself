@@ -1,15 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import Display from './Display.jsx';
-import Settings from './Settings.jsx';
-import ImgUpload from './ImgUpload.jsx';
+import React, { useState } from 'react';
+import Display from './display.jsx';
+import Settings from './settings.jsx';
+import ImgUpload from "./imgUpload.jsx";
 
 export default function Dashboard() {
     const [displayState, setDisplayState] = useState({
         colorOfClothes: 'src/assets/images/front.png',
-        upperText: 'this is text',
-        nameTmg: '',
+        upperText: '',
         url: '',
         textColor: 'black',
+        textSize: "16px",
+        width: "20rem",
+    });
+
+    const [imgState, setImgState] = useState({
+        transform: 0,
+        top: "10rem",
+        left: 0,
+    });
+    console.log(imgState);
+
+    const [textState, setTextState] = useState({
+        transform: 0,
+        top: "40rem",
+        left: "25rem"
     });
 
     const handleColorOfClothes = (e) => {
@@ -39,49 +53,97 @@ export default function Dashboard() {
         setDisplayState({ ...displayState, upperText: newUpperText });
     };
 
-    const handleImageUpload = (e) => {
-        setDisplayState({ ...displayState, url: URL.createObjectURL(e.target.files[0]) });
+    const handleTextSize = (e) => {
+        const newSize = `${e.target.value}px`;
+        setDisplayState({ ...displayState, textSize: newSize });
     };
-
     const handleTextColor = (e) => {
         const newTextColor = e.target.value;
         setDisplayState({ ...displayState, textColor: newTextColor });
     };
 
-    const [position, setPosition] = useState({
-        top: 500,
-        left: 1000,
-    });
-
-    useEffect(() => {
-        console.log(position);
-    }, [position]);
-
-    function onDragStart(e) {
-        console.log(e);
-    }
-
-    function onDrop(e) {
-        console.log(e);
-        setDisplayState(e.dataTransfer.getData("text"));
-    }
-
-    function onDragOver(e) {
-        e.preventDefault();
-
-        setPosition({
-            top: `${e.clientY}px`,
-            left: `${e.clientX}px`,
-        });
-    }
-    const box = {
-        width: "200px",
-        height: "200px",
-        background: "transparent",
-        position: "absolute",
-        top: position.top,
-        left: position.left,
+    const handleImageUpload = (e) => {
+        setDisplayState({ ...displayState, url: URL.createObjectURL(e.target.files[0]) });
     };
+
+    const handleImageSize = (e) => {
+        const newSizeImage = `${e.target.value}rem`;
+        setDisplayState({ ...displayState, width: newSizeImage });
+    };
+
+    const rotateLeft = () => {
+        setTextState(prevState => ({
+            ...prevState,
+            transform: (prevState.transform - 10) % 360
+        }));
+    };
+
+    const rotateRight = () => {
+        setTextState(prevState => ({
+            ...prevState,
+            transform: (prevState.transform + 10) % 360
+        }));
+    };
+
+    const rotateLeftImg = () => {
+        setImgState(prevState => ({
+            ...prevState,
+            transform: (prevState.transform - 10) % 360
+        }));
+
+    };
+
+    const rotateRightImg = () => {
+        setImgState(prevState => ({
+            ...prevState,
+            transform: (prevState.transform + 10) % 360
+        }));
+    };
+    const moveUp = () => {
+        setTextState((prevState) => ({
+            ...prevState,
+            top: prevState.top - 10,
+        }));
+    };
+
+    const moveDown = () => {
+        setTextState((prevState) => ({
+            ...prevState,
+            top: prevState.top + 10,
+        }));
+    };
+
+    const moveLeft = () => {
+        setTextState((prevState) => ({
+            ...prevState,
+            left: prevState.left - 10,
+        }));
+    };
+
+    const moveRight = () => {
+        console.log('balalal');
+        setTextState((prevState) => ({
+            ...prevState,
+            left: prevState.left + 10,
+
+        }));
+    };
+
+    const moveUpImg = () => {
+        setTextState((prevState) => ({
+            ...prevState,
+            top: prevState.top - 10,
+        }));
+        console.log('aaaaaaaaaaaaaaaa');
+    };
+
+    const moveDownImg = () => {
+        setTextState((prevState) => ({
+            ...prevState,
+            top: prevState.top + 10,
+        }));
+    };
+
 
     return (
         <section className="container">
@@ -91,6 +153,20 @@ export default function Dashboard() {
                         color={handleColorOfClothes}
                         text={handleUpperText}
                         textColor={handleTextColor}
+                        textSize={handleTextSize}
+                        imageSize={handleImageSize}
+                        displayState={displayState}
+                        handleImageUpload={handleImageUpload}
+                        rotateLeft={rotateLeft}
+                        rotateRight={rotateRight}
+                        rotateLeftImg={rotateLeftImg}
+                        rotateRightImg={rotateRightImg}
+                        moveUp={moveUp}
+                        moveDown={moveDown}
+                        moveLeft={moveLeft}
+                        moveRight={moveRight}
+                        moveUpImg={moveUpImg}
+                        moveDownImg={moveDownImg}
                     />
                 </div>
             </div>
@@ -98,16 +174,13 @@ export default function Dashboard() {
                 <div className="display column">
                     <Display
                         displayState={displayState}
-                        onDrop={onDrop} onDragOver={onDragOver}
-                        position={position}
+                        imgState={imgState}
+                        textState={textState}
+                        image={displayState.url}
                     />
                 </div>
                 <div className="file-upload">
-                    <form>
-                        <input type="file" onChange={handleImageUpload} />
-                    </form>
                     <ImgUpload
-                        onDragStart={onDragStart} boxStyle={box}
                         image={displayState.url}
                     />
                 </div>

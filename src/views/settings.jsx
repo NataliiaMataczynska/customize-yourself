@@ -1,6 +1,24 @@
 import React from "react";
 
-export default function  Settings({color, text, textColor, hundleImageClick, handleImageChange, ref, image}){
+export default function Settings({
+                                     color,
+                                     text,
+                                     textColor,
+                                     textSize,
+                                     imageSize,
+                                     displayState,
+                                     handleImageUpload,
+                                     rotateLeft,
+                                     rotateRight,
+                                     rotateLeftImg,
+                                     rotateRightImg,
+                                     moveLeft,
+                                     moveRight,
+                                     moveUp,
+                                     moveDown,
+                                     moveDownImg,
+                                     moveUpImg
+                                 }) {
     return (
         <div className=' container jacket-options'>
             <div className="jacket-option jacket-color ">
@@ -45,12 +63,59 @@ export default function  Settings({color, text, textColor, hundleImageClick, han
                 </select>
             </div>
             <div className="jacket-option">
-                <h4>Napisz swój tekst</h4>
-                <input onChange={text} type="text" className='form-control' placeholder='Twój tekst'/>
+                <h4>Twoje zdjęcie</h4>
+                <form>
+                    <input type="file" onChange={handleImageUpload} />
+                </form>
             </div>
             <div className="jacket-option">
-                <h4 >Rozmiar tekstu</h4>
-                <input type="range" min="0" max="100"/>
+                <h4>Rozmiar zdjęcia</h4>
+                <input
+                    type="range"
+                    min="1"
+                    max="40"
+                    value={parseInt(displayState.width)}
+                    onChange={imageSize}
+                />
+            </div>
+            <div className="jacket-option">
+                <h4>Obróć zdjęcie</h4>
+                <div>
+                    <button onClick={rotateLeftImg} style={{
+                        background: `url("src/assets/images/rotate-left.png") no-repeat`,
+                        backgroundSize: 'cover', width: '2rem', height: '2rem' }}>Left</button>
+                    <button onClick={rotateRightImg} style={{
+                        background: `url("src/assets/images/rotate-right.png") no-repeat`,
+                        backgroundSize: 'cover',width: '2rem', height: '2rem' }}>Right</button>
+                </div>
+            </div>
+            <div className="jacket-option">
+                <h4>Przesuń zdjęcie</h4>
+                <div>
+                    <button onClick={moveUpImg}>Up</button>
+                    <button >Left</button>
+                    <button >Right</button>
+                    <button onClick={moveDownImg}>Down</button>
+                </div>
+            </div>
+            <div className="jacket-option">
+                <h4>Twój tekst</h4>
+                <input
+                    onChange={text}
+                    type="text"
+                    className="form-control"
+                    placeholder="Twój tekst"
+                />
+            </div>
+            <div className="jacket-option">
+                <h4>Rozmiar tekstu</h4>
+                <input
+                    type="range"
+                    min="10"
+                    max="100"
+                    value={parseInt(displayState.textSize)}
+                    onChange={textSize}
+                />
             </div>
             <div className="jacket-option">
                 <h4 >Color tekstu</h4>
@@ -61,8 +126,28 @@ export default function  Settings({color, text, textColor, hundleImageClick, han
                     <option value="blue">blue</option>
                 </select>
             </div>
+            <div className="jacket-option">
+                <h4>Obróć tekst</h4>
+                <div>
+                    <button onClick={rotateLeft} style={{
+                        background: `url("src/assets/images/rotate-left.png") no-repeat`,
+                        backgroundSize: 'cover', width: '2rem', height: '2rem' }}></button>
+                    <button onClick={rotateRight} style={{
+                        background: `url("src/assets/images/rotate-right.png") no-repeat`,
+                        backgroundSize: 'cover',width: '2rem', height: '2rem' }}></button>
+                </div>
+            </div>
+            <div className="jacket-option">
+                <h4>Przesuń tekst</h4>
+                <div>
+                    <button onClick={moveUp}>Up</button>
+                    <button onClick={moveLeft}>Left</button>
+                    <button onClick={moveRight}>Right</button>
+                    <button onClick={moveDown}>Down</button>
+                </div>
+            </div>
             <h4 ></h4>
-            <button className="btn btn-primary">save</button>
+            <button className="btn btn-primary">Zapisz i wyślij</button>
         </div>
 
     )

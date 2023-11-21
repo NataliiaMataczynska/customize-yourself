@@ -7,6 +7,10 @@ export default function Navbar() {
 
     const handleDropdown = () => {
         setDropdown(!dropdown);
+
+        setTimeout(() => {
+            setDropdown(false);
+        }, 4000);
     };
 
     return (
