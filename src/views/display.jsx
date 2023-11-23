@@ -7,13 +7,17 @@ export default function Display({ displayState, image, imgState, textState }) {
         fontSize: textSize,
         transform: `rotate(${textState.transform}deg)`,
         top: `${textState.top}px`,
-        left: `${textState.left}px`
+        left: `${textState.left}px`,
+        position: 'absolute',
     };
 
     const imgStyle = {
         width: width,
         transform: `rotate(${imgState.transform}deg)`,
-        top: `${textState.top}rem`,
+        top: `${imgState.top}px`,
+        left: `${imgState.left}px`,
+        position: 'absolute',
+        background: "transparent",
     };
 
 
@@ -21,8 +25,7 @@ export default function Display({ displayState, image, imgState, textState }) {
         <div className='card card-content' >
             <div className='imgJacket text-center'>
                 <img className="img responsive" src={colorOfClothes} alt="img-jacket" style={{ position: 'relative'}} />
-                <img src={image} style={{...imgStyle, position: 'absolute', background: "transparent",
-                    left: "10rem" }} alt="" />
+                <img src={image} style={{...imgStyle}} alt="" />
             </div>
             <div className="nameText text-center">
                 <div className="upperText" >

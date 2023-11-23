@@ -15,15 +15,15 @@ export default function Dashboard() {
 
     const [imgState, setImgState] = useState({
         transform: 0,
-        top: "10rem",
+        top: 10,
         left: 0,
     });
     console.log(imgState);
 
     const [textState, setTextState] = useState({
         transform: 0,
-        top: "40rem",
-        left: "25rem"
+        top: 40,
+        left: 25,
     });
 
     const handleColorOfClothes = (e) => {
@@ -100,53 +100,38 @@ export default function Dashboard() {
         }));
     };
     const moveUp = () => {
-        setTextState((prevState) => ({
-            ...prevState,
-            top: prevState.top - 10,
-        }));
+        setTextState(prevState => ({ ...prevState, top: parseInt(prevState.top) - 10 }));
     };
 
     const moveDown = () => {
-        setTextState((prevState) => ({
-            ...prevState,
-            top: prevState.top + 10,
-        }));
+        setTextState(prevState => ({ ...prevState, top: parseInt(prevState.top) + 10 }));
     };
 
     const moveLeft = () => {
-        setTextState((prevState) => ({
-            ...prevState,
-            left: prevState.left - 10,
-        }));
+        setTextState(prevState => ({ ...prevState, left: parseInt(prevState.left) - 10 }));
     };
-
     const moveRight = () => {
-        console.log('balalal');
-        setTextState((prevState) => ({
-            ...prevState,
-            left: prevState.left + 10,
-
-        }));
+        setTextState(prevState => ({ ...prevState, left: parseInt(prevState.left) - 10 }));
     };
 
     const moveUpImg = () => {
-        setTextState((prevState) => ({
-            ...prevState,
-            top: prevState.top - 10,
-        }));
-        console.log('aaaaaaaaaaaaaaaa');
+        setImgState(prevState => ({ ...prevState, top: parseInt(prevState.top) - 10 }));
     };
 
     const moveDownImg = () => {
-        setTextState((prevState) => ({
-            ...prevState,
-            top: prevState.top + 10,
-        }));
+        setImgState(prevState => ({ ...prevState, top: parseInt(prevState.top) + 10 }));
     };
 
+    const moveLeftImg = () => {
+        setImgState(prevState => ({ ...prevState, left: parseInt(prevState.left) - 10 }));
+    };
+
+    const moveRightImg = () => {
+        setImgState(prevState => ({ ...prevState, left: parseInt(prevState.left) + 10 }));
+    };
 
     return (
-        <section className="container">
+        <section className="container" >
             <div className="row row-up">
                 <div className="settings column">
                     <Settings
@@ -167,6 +152,8 @@ export default function Dashboard() {
                         moveRight={moveRight}
                         moveUpImg={moveUpImg}
                         moveDownImg={moveDownImg}
+                        moveLeftImg={moveLeftImg}
+                        moveRightImg={moveRightImg}
                     />
                 </div>
             </div>

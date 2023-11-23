@@ -19,7 +19,7 @@ const Home = () => {
     // }, [text]);
 
     return (
-        <div className="text-efect">
+        <div className="text-efect" >
             Strona główna
         {/*    <span style={{ fontWeight: 'bold', color: 'black', fontSize: '2rem' }}>*/}
         {/*{displayText}*/}

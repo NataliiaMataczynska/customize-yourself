@@ -17,7 +17,9 @@ export default function Settings({
                                      moveUp,
                                      moveDown,
                                      moveDownImg,
-                                     moveUpImg
+                                     moveUpImg,
+                                     moveLeftImg,
+                                     moveRightImg
                                  }) {
     return (
         <div className=' container jacket-options'>
@@ -83,18 +85,20 @@ export default function Settings({
                 <div>
                     <button onClick={rotateLeftImg} style={{
                         background: `url("src/assets/images/rotate-left.png") no-repeat`,
-                        backgroundSize: 'cover', width: '2rem', height: '2rem' }}>Left</button>
+                        backgroundSize: 'cover', width: '2rem', height: '2rem' }}></button>
                     <button onClick={rotateRightImg} style={{
                         background: `url("src/assets/images/rotate-right.png") no-repeat`,
-                        backgroundSize: 'cover',width: '2rem', height: '2rem' }}>Right</button>
+                        backgroundSize: 'cover',width: '2rem', height: '2rem' }}></button>
                 </div>
             </div>
             <div className="jacket-option">
                 <h4>Przesuń zdjęcie</h4>
                 <div>
-                    <button onClick={moveUpImg}>Up</button>
-                    <button >Left</button>
-                    <button >Right</button>
+                    <button onClick={moveUpImg} style={{
+                        background: `url("src/assets/images/arrow-up.png") no-repeat`,
+                        backgroundSize: 'cover', width: '2rem', height: '2rem' }}>Up</button>
+                    <button onClick={moveLeftImg}>Left</button>
+                    <button onClick={moveRightImg}>Right</button>
                     <button onClick={moveDownImg}>Down</button>
                 </div>
             </div>
@@ -140,7 +144,7 @@ export default function Settings({
             <div className="jacket-option">
                 <h4>Przesuń tekst</h4>
                 <div>
-                    <button onClick={moveUp}>Up</button>
+                    <button onClick={moveUp}  >Up</button>
                     <button onClick={moveLeft}>Left</button>
                     <button onClick={moveRight}>Right</button>
                     <button onClick={moveDown}>Down</button>
