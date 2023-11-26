@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Settings({
+                                     handleChangeOptions,
                                      color,
                                      text,
                                      textColor,
@@ -27,20 +28,18 @@ export default function Settings({
                 <h4>Wybór produktu</h4>
                 <select className="form-control ">
                     <option>Kurtka jeansowa</option>
-                    <option>Kurtka jeansowa</option>
-                    <option>Kurtka jeansowa</option>
                 </select>
             </div>
             <div className="jacket-option model ">
                 <h4>Model</h4>
-                <select className="form-control ">
+                <select className="form-control " value={displayState.model} name="model" onChange={handleChangeOptions}>
                     <option>Damska</option>
                     <option>Męska</option>
                 </select>
             </div>
             <div className="jacket-option model ">
                 <h4>Rozmiar</h4>
-                <select className="form-control ">
+                <select className="form-control " value={displayState.size} name="size" onChange={handleChangeOptions}>
                     <option>XS</option>
                     <option>S</option>
                     <option>M</option>
@@ -59,7 +58,7 @@ export default function Settings({
             </div>
             <div className="jacket-option model ">
                 <h4>Dostarczenie produktu</h4>
-                <select className="form-control form-control ">
+                <select className="form-control form-control " value={displayState.size} name="delivery" onChange={handleChangeOptions}>
                     <option>Klient</option>
                     <option>Firma</option>
                 </select>
@@ -144,7 +143,7 @@ export default function Settings({
             <div className="jacket-option">
                 <h4>Przesuń tekst</h4>
                 <div>
-                    <button onClick={moveUp}  >Up</button>
+                    <button onClick={moveUp}>Up</button>
                     <button onClick={moveLeft}>Left</button>
                     <button onClick={moveRight}>Right</button>
                     <button onClick={moveDown}>Down</button>

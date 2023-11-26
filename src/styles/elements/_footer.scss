@@ -1,45 +1,45 @@
-//.container {
-//  height: 15vh;
-//  background: black;
-//  display: flex;
-//  justify-content: space-around;
-//  align-items: center;
-//  .footer-row {
-//    display: flex;
-//    width: 60vw;
-//    justify-content: space-around;
-//    margin-right: 2rem;
-//    .footer-col {
-//      display: flex;
-//      list-style: none;
-//      width: 60vw;
-//      margin-right: 2rem;
-//      margin-left: 2rem;
-//      .list {
-//        display: flex;
-//        align-items: start;
-//        flex-direction: column;
-//        text-align: left;
-//        li {
-//          text-align: left;
-//          line-height: 1.5rem;
-//          text-decoration: none;
-//          color: #06a69d;
-//          font-size: 1rem;
-//          font-weight: 700;
-//          margin-right: 2.2rem;
-//          letter-spacing: 0.1rem;
-//          transition: 0.5s;
-//        }
-//        li:hover {
-//          color: #ff007f;
-//          text-shadow: 0 0 10px #ff007f, 0 0 20px#ff007f, 0 0 40px #ff007f, 0 0 80px#ff007f;
-//        }
-//      }
-//
-//
-//    }
-//  }
-//
-//
-//}
+.footer-container {
+  height: 15vh;
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .footer-row {
+    display: flex;
+    width: 60vw;
+    justify-content: space-around;
+    margin-right: 2rem;
+    .footer-col {
+      display: flex;
+      list-style: none;
+      width: 60vw;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      .list {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        text-align: left;
+        li {
+          text-align: left;
+          line-height: 1.5rem;
+          text-decoration: none;
+          color: #06a69d;
+          font-size: 1rem;
+          font-weight: 700;
+          margin-right: 2.2rem;
+          letter-spacing: 0.1rem;
+          transition: 0.5s;
+        }
+        li:hover {
+          color: #ff007f;
+          text-shadow: 0 0 10px #ff007f, 0 0 20px#ff007f, 0 0 40px #ff007f, 0 0 80px#ff007f;
+        }
+      }
+
+
+    }
+  }
+
+
+}

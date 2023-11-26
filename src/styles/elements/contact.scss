@@ -1,0 +1,35 @@
+.container-cotact {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2rem;
+    input {
+      width: 100%;
+      height: 4rem;
+      padding: 0.5rem;
+      outline: none;
+      border-radius: 0.4rem;
+      border: 1px solid pink;
+      &:focus {
+        border: 2px solid lightseagreen;
+      }
+    }
+    label {
+      margin-top: 1rem;
+    }
+
+    input[type="submit"] {
+      margin-top: 2rem;
+      cursor: pointer;
+      background-color: lightgreen;
+      color: white;
+      border: none;
+    }
+  }
+}

@@ -9,7 +9,7 @@ import Contact from './views/contact';
 import YourProject from './views/yourProject';
 import './styles/main.scss';
 import Submenu from "./components/submenu.jsx";
-// import Footer from "./views/footer.jsx";
+import Footer from "./views/footer.jsx";
 
 export default function App() {
     return (
@@ -23,10 +23,9 @@ export default function App() {
                            element={<Home >
                                <Route path="/project" element={<Submenu />
                                } /> </Home>} />
-                    <Route path="/kontakt" element={<Contact />} />
+                    <Route path="/contact" element={<Contact />} />
                 </Routes>
-                {/*<Footer />*/}
-
+                <Footer />
             </div>
         </>
     );

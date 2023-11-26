@@ -29,9 +29,18 @@ export default function Navbar() {
                         {dropdown && <Submenu />}
                     </li>
                     <li className="navbar-item">
-                        <Link to="/kontact" className="navbar-link">KONTAKT</Link>
+                        <Link to="/contact" className="navbar-link">KONTAKT</Link>
                     </li>
                 </ul>
+                {/*<ul className="navbar-items" style={{flexDirection: "column", width: "15rem"}}>*/}
+                {/*    <li className="navbar-item">*/}
+                {/*        <Link to="/signin" className="navbar-link"> <button className="navbar-link" style={{background: "transparent", border: "none", fontSize: "0.7rem", lineHeight: "2rem"}}>ZALOGÓJ SIĘ</button></Link>*/}
+                {/*    </li>*/}
+                {/*    <li className="navbar-item">*/}
+                {/*        <Link to="/signup" className="navbar-link"><button className="navbar-link" style={{background: "transparent", border: "none", fontSize: "0.7rem", lineHeight: "2rem"}}>ZAREJESTRUJ SIĘ</button></Link>*/}
+                {/*    </li>*/}
+                {/*</ul>*/}
+
             </nav>
             <Outlet />
         </div>
