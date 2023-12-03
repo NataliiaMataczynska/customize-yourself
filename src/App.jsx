@@ -10,7 +10,6 @@ import YourProject from './views/yourProject';
 import './styles/main.scss';
 import Submenu from "./components/submenu.jsx";
 import Footer from "./views/footer.jsx";
-import OurProjects from "./views/ourProjects.jsx";
 import Jackets from "./components/jackets.jsx";
 import PancilDrowing from "./components/pancilDrowing.jsx";
 
@@ -22,15 +21,10 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/project" element={<YourProject />} />
-                    <Route path="/realizacion"
-                           element={<OurProjects >
-                               <Route path="/realizacion" element={<Submenu />}>
-                                   <Route path="/realizacion" element={<Jackets />} />
-                                   <Route path="/realizacion" element={<PancilDrowing />} />
-                               </Route> </OurProjects>} />
-                    {/*<Route path="/realizacion" element={<Submenu />}>*/}
-                    {/*    <Route path="/realizacion/jackets" element={<Jackets />} />*/}
-                    {/*</Route>*/}
+                    <Route element={<Submenu />}>
+                        <Route path="/jackets" element={<Jackets />} />
+                        <Route path="/pancildrowing" element={<PancilDrowing />} />
+                    </Route>
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />

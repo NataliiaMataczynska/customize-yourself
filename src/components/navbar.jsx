@@ -35,7 +35,6 @@ export default function Navbar() {
                     <li className="navbar-item" onClick={handleDropdown}>
                         <div className="navbar-link">NASZE REALIZACJE</div>
                         {dropdown && <Submenu />}
-
                     </li>
                     <li className="navbar-item">
                         <Link to="/contact" className="navbar-link">KONTAKT</Link>

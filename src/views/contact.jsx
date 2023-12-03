@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react';
+import { useRef, useState} from 'react';
 import Questions from "../styles/elements/questions.jsx";
 import emailjs from '@emailjs/browser';
 
@@ -6,14 +6,17 @@ const quest = [
     {
         question: "loremLorem ipsum dolor sit amet, consectetur adipisicing elit",
         text: "Architecto debitis saepe sed! Ea, exercitationem similique.",
+        id: 1
     },
     {
         question: "loremLorem ipsum dolor sit amet, consectetur adipisicing elit",
         text: "Architecto debitis saepe sed! Ea, exercitationem similique.",
+        id: 2
     },
     {
         question: "loremLorem ipsum dolor sit amet, consectetur adipisicing elit",
         text: "Architecto debitis saepe sed! Ea, exercitationem similique.",
+        id: 3
     },
 ]
 

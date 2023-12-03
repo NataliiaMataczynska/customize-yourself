@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 
 export default function Settings({
                                      handleChangeOptions,
@@ -171,9 +171,32 @@ export default function Settings({
                         <span></span>
                     </div>
                 </div>
+                <button className="btn btn-primary">Zapisz i wyślij</button>
             </div>
-            <button className="btn btn-primary">Zapisz i wyślij</button>
         </div>
 
     )
 }
+
+Settings.propTypes = {
+    handleChangeOptions: PropTypes.func.isRequired,
+    color: PropTypes.func.isRequired,
+    text: PropTypes.func.isRequired,
+    textColor: PropTypes.func.isRequired,
+    textSize: PropTypes.func.isRequired,
+    imageSize: PropTypes.func.isRequired,
+    displayState: PropTypes.object.isRequired,
+    handleImageUpload: PropTypes.func.isRequired,
+    rotateLeft: PropTypes.func.isRequired,
+    rotateRight: PropTypes.func.isRequired,
+    rotateLeftImg: PropTypes.func.isRequired,
+    rotateRightImg: PropTypes.func.isRequired,
+    moveLeft: PropTypes.func.isRequired,
+    moveRight: PropTypes.func.isRequired,
+    moveUp: PropTypes.func.isRequired,
+    moveDown: PropTypes.func.isRequired,
+    moveDownImg: PropTypes.func.isRequired,
+    moveUpImg: PropTypes.func.isRequired,
+    moveLeftImg: PropTypes.func.isRequired,
+    moveRightImg: PropTypes.func.isRequired
+};

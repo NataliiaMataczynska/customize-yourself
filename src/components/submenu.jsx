@@ -6,7 +6,7 @@ export default function Submenu() {
         <div >
             <ul className="submenu-items">
                 <li className="submenu-item">
-                    <Link to="/realizacion" className="submenu-link">Kurtki jeansowe</Link>
+                    <Link to="/jackets" className="submenu-link">Kurtki jeansowe</Link>
                 </li>
                 <li className="submenu-item">
                     <Link to="/realizacion/shoes" className="submenu-link">Buty</Link>
@@ -18,7 +18,7 @@ export default function Submenu() {
                     <Link to="/realizacion/painting" className="submenu-link">Malowanie</Link>
                 </li>
                 <li className="submenu-item">
-                    <Link to="/realizacion/pancildrowing" className="submenu-link">Rysunek ołówkiem</Link>
+                    <Link to="/pancildrowing" className="submenu-link">Rysunek ołówkiem</Link>
                 </li>
                 <li className="submenu-item">
                     <Link to="/realizacion/other" className="submenu-link">Inne</Link>

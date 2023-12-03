@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-bottom: 2rem;
     .column {
       width: 100%;
       display: flex;
@@ -32,6 +33,7 @@
   .row-dow {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
   }
 
 }
@@ -58,7 +60,7 @@
       padding: 2rem;
     }
     &:hover {
-      background-color: #e1d7d7;
+      background-color: #808080;
     }
   }
   button {
@@ -86,11 +88,13 @@ button {
   background-color: #ddd;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.6rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
+  font-weight: 700;
+  line-height: 1rem;
   margin: 2px 2px;
   transition-duration: 0.4s;
 }
@@ -118,3 +122,4 @@ select, input {
 select option:checked {
   color: greenyellow;
 }
+

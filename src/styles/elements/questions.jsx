@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react';
+import React, { useRef } from 'react';
 
 export default function Questions(props) {
     const contentEl = useRef(null);
@@ -6,10 +6,10 @@ export default function Questions(props) {
     const { question, id, text} = que;
 
     return (
-        <div>
+        <>
             <section  className={active === id ? "active" : ""} onClick={() => handleToggle(id)}>
                 <h2>{question}</h2>
-                <span> v </span>
+                <span><i className="fas fa-arrow-down" style={{paddingRight: "1rem"}}></i></span>
             </section >
             <div ref={contentEl}
                  className={`collapse ${active === id ? "show" : ""}`}
@@ -20,6 +20,6 @@ export default function Questions(props) {
             >
                 <p>{text}</p>
             </div>
-        </div>
+        </>
     );
 }

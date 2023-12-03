@@ -9,27 +9,42 @@
     flex-direction: column;
     width: 100%;
     font-size: 2rem;
+    color:#ff007f;
+    text-shadow: 0 0 10px #ff007f, 0 0 20px#ff007f, 0 0 40px #ff007f, 0 0 80px#ff007f;
     input {
       width: 100%;
       height: 4rem;
+      font-size: 2rem;
       padding: 0.5rem;
       outline: none;
       border-radius: 0.4rem;
-      border: 1px solid pink;
+      border: 1px solid #06a69d;
       &:focus {
         border: 2px solid lightseagreen;
       }
     }
     label {
-      margin-top: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 0.3rem;
+    }
+    textarea {
+      width: 100%;
+      height: 6rem;
+      border-radius: 0.4rem;
+      background: black;
+      border: 1px solid #06a69d;
     }
 
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-      background-color: lightgreen;
+      background-color: #06a69d;;
       color: white;
       border: none;
+    }
+    input[type="submit"]:hover {
+      color:#ff007f;
+      text-shadow: 0 0 10px #ff007f, 0 0 20px#ff007f, 0 0 40px #ff007f, 0 0 80px#ff007f;
     }
   }
 }
@@ -46,29 +61,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3rem;
+    height: 4rem;
     padding: 0 0.5rem 0 0.5rem;
     border-radius: 5px;
-    cursor: pointer;
-    background: #06a69d;
     margin-bottom: 0.7rem;
+    background: #808080;
     color: black;
+    cursor: pointer;
 
-    .active {
-      background: #6366f1;
-
-      span {
-        rotate: -180deg;
-      }
-    }
   }
 }
   article {
     width: 40rem;
-    padding: 2rem;
-    background: white;
+    padding: 1rem;
+    background: #FFFFFF;
     border-radius: 0.7rem;
-    color: black;
     h2 {
       margin: 0;
       font-size: 1rem;
@@ -91,8 +98,15 @@
   height: 0;
   overflow: hidden;
   transition: height 0.5s ease;
-  .show {
-    height: auto;
-  }
+}
+.collapse.show {
+  height: auto;
 }
 
+section.active {
+    background: #06a69d;
+}
+
+section.active span {
+  rotate: -180deg;
+}
