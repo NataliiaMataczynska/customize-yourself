@@ -22,7 +22,7 @@
     height: 9rem;
     border-radius: 50%;
     border: 1px solid #ff007f;
-    box-shadow: 0 0 10px #ff007f, 0 0 20px#ff007f, 0 0 40px #ff007f, 0 0 80px#ff007f;
+    box-shadow: 0 0 5px #ff007f, 0 0 10px#ff007f, 0 0 20px #ff007f, 0 0 40px#ff007f;
     width: 9rem;
     left: 10rem;
   }
@@ -32,10 +32,10 @@
     text-align: center;
     width: 80vw;
     justify-content: flex-end;
-    margin-right: 2rem;
     .navbar-item {
       display: flex;
       align-items: center;
+      position: relative;
       .navbar-link {
         text-decoration: none;
         color: #06a69d;
@@ -61,10 +61,13 @@
   position: absolute;
   list-style: none;
   text-align: start;
-  top: 8rem;
+  top: 3rem;
+  right: 1.8rem;
+  z-index: 1;
   .submenu-item {
     background-color: black;
     cursor: pointer;
+    display: block;
     .submenu-link {
       display: block;
       width: 100%;
@@ -86,3 +89,4 @@
 .submenu-items.clicked {
   display: none;
 }
+

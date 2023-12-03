@@ -1,5 +1,5 @@
 .container-cotact {
-  width: 400px;
+  width: 40rem;
   display: flex;
   justify-content: center;
 
@@ -33,3 +33,65 @@
     }
   }
 }
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10rem;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #06a69d;
+    margin-bottom: 0.7rem;
+    color: black;
+
+    .active {
+      background: #6366f1;
+
+      span {
+        rotate: -180deg;
+      }
+    }
+  }
+}
+  article {
+    width: 40rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.7rem;
+    color: black;
+    h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    p {
+      padding: 0 1rem 0.7rem;
+      line-height: 1.7rem;
+      font-size: 1rem;
+    }
+
+    span {
+      transition: 0.3s;
+    }
+  }
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  .show {
+    height: auto;
+  }
+}
+

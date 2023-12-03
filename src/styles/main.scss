@@ -5,9 +5,11 @@
 //@import "https://fontawesome.com/how-to-use/on-the-web/using-with/sass96";
 @import 'elements/footer';
 @import 'elements/contact';
+@import 'elements/home';
+@import 'elements/jackets';
 
 .App {
-  background-color: #e1d7d7;
+  background-color: black;
   height: 100%;
   width: 100%;
 }

@@ -8,7 +8,7 @@ export default function YourProject() {
         model: 'Damska',
         size: 'XS',
         delivery: 'Klient',
-        colorOfClothes: 'src/assets/images/front.png',
+        colorOfClothes: 'src/assets/images/home/02457A.jpg',
         upperText: '',
         url: '',
         textColor: 'black',
@@ -54,17 +54,23 @@ export default function YourProject() {
         let imageSrc = '';
 
         switch (newColor) {
-            case 'white':
-                imageSrc = 'src/assets/images/front.png';
+            case 'D6E8EE':
+                imageSrc = 'src/assets/images/home/D6E8EE.jpg';
                 break;
-            case 'black':
-                imageSrc = 'src/assets/images/front%20black.png';
+            case '97CADB':
+                imageSrc = 'src/assets/images/home/97CADB.jpg';
                 break;
-            case 'blue':
-                imageSrc = 'src/assets/images/front%20blue.png';
+            case '018ABE':
+                imageSrc = 'src/assets/images/home/018ABE.jpg';
+                break;
+            case '02457A':
+                imageSrc = 'src/assets/images/home/02457A.jpg';
+                break;
+            case '001B48':
+                imageSrc = 'src/assets/images/home/001B48.jpg';
                 break;
             default:
-                imageSrc = 'src/assets/images/front.png';
+                imageSrc = 'src/assets/images/home/black.jpg';
                 break;
         }
 

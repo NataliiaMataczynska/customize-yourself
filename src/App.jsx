@@ -10,6 +10,9 @@ import YourProject from './views/yourProject';
 import './styles/main.scss';
 import Submenu from "./components/submenu.jsx";
 import Footer from "./views/footer.jsx";
+import OurProjects from "./views/ourProjects.jsx";
+import Jackets from "./components/jackets.jsx";
+import PancilDrowing from "./components/pancilDrowing.jsx";
 
 export default function App() {
     return (
@@ -20,9 +23,14 @@ export default function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/project" element={<YourProject />} />
                     <Route path="/realizacion"
-                           element={<Home >
-                               <Route path="/project" element={<Submenu />
-                               } /> </Home>} />
+                           element={<OurProjects >
+                               <Route path="/realizacion" element={<Submenu />}>
+                                   <Route path="/realizacion" element={<Jackets />} />
+                                   <Route path="/realizacion" element={<PancilDrowing />} />
+                               </Route> </OurProjects>} />
+                    {/*<Route path="/realizacion" element={<Submenu />}>*/}
+                    {/*    <Route path="/realizacion/jackets" element={<Jackets />} />*/}
+                    {/*</Route>*/}
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />

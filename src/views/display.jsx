@@ -24,7 +24,7 @@ export default function Display({ displayState, image, imgState, textState }) {
     return (
         <div className='card card-content' >
             <div className='imgJacket text-center'>
-                <img className="img responsive" src={colorOfClothes} alt="img-jacket" style={{ position: 'relative'}} />
+                <img className="img responsive" src={colorOfClothes} alt="img-jacket" style={{ position: 'relative', width: "40rem"}} />
                 <img src={image} style={{...imgStyle}} alt="" />
             </div>
             <div className="nameText text-center">
