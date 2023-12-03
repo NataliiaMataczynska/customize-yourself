@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import Submenu from './Submenu';
+import Submenu from "./submenu.jsx";
 
 export default function Navbar() {
     const [dropdown, setDropdown] = useState(false);

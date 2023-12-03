@@ -9,7 +9,7 @@ export default function Questions(props) {
         <>
             <section  className={active === id ? "active" : ""} onClick={() => handleToggle(id)}>
                 <h2>{question}</h2>
-                <span><i className="fas fa-arrow-down" style={{paddingRight: "1rem"}}></i></span>
+                <span><i className="fas fa-arrow-down"></i></span>
             </section >
             <div ref={contentEl}
                  className={`collapse ${active === id ? "show" : ""}`}
