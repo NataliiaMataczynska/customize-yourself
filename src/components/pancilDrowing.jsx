@@ -1,4 +1,4 @@
-import React, {useState }from 'react';
+import React, {useState, useEffect }from 'react';
 import { img1, img2, img3 } from 'src/assets/images/pancil_drowing/'
 
 document.getElementById('pancil-1').src = img1
