@@ -1,8 +1,8 @@
 import React from 'react';
-import Pancil1 from "src/assets/images/pancil_drowing/pancil-1.jpg";
+import image1 from "../assets/images/pancil_drowing/pancil-1.jpg";
 export default function PancilDrowing() {
     const imagesPancilDrowing = [
-        Pancil1,
+        image1,
         'src/assets/images/pancil_drowing/pancil-2.jpg',
         'src/assets/images/pancil_drowing/pancil-3.jpg',
         'src/assets/images/pancil_drowing/pancil-4.jpg',
