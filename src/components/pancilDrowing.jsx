@@ -1,17 +1,26 @@
-import React from 'react';
 import image1 from "../assets/images/pancil_drowing/pancil-1.jpg";
+import image2 from "../assets/images/pancil_drowing/pancil-2.jpg";
+import image3 from "../assets/images/pancil_drowing/pancil-3.jpg";
+import image4 from "../assets/images/pancil_drowing/pancil-4.jpg";
+import image6 from "../assets/images/pancil_drowing/pancil-6.jpg";
+import image7 from "../assets/images/pancil_drowing/pancil-7.jpg";
+import image9 from "../assets/images/pancil_drowing/pancil-9.jpg";
+import image10 from "../assets/images/pancil_drowing/pancil-10.jpg";
+import image5 from "../assets/images/pancil_drowing/pancil-5.jpg";
+import image8 from "../assets/images/pancil_drowing/pancil-8.jpg";
+
 export default function PancilDrowing() {
     const imagesPancilDrowing = [
         image1,
-        'src/assets/images/pancil_drowing/pancil-2.jpg',
-        'src/assets/images/pancil_drowing/pancil-3.jpg',
-        'src/assets/images/pancil_drowing/pancil-4.jpg',
-        'src/assets/images/pancil_drowing/pancil-6.jpg',
-        'src/assets/images/pancil_drowing/pancil-7.jpg',
-        'src/assets/images/pancil_drowing/pancil-9.jpg',
-        'src/assets/images/pancil_drowing/pancil-10.jpg',
-        'src/assets/images/pancil_drowing/pancil-5.jpg',
-        'src/assets/images/pancil_drowing/pancil-8.jpg',
+        image2,
+        image3,
+        image4,
+        image6,
+        image7,
+        image9,
+        image10,
+        image5,
+        image8,
     ];
 
     return (
