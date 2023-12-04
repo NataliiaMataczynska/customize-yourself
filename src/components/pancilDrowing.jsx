@@ -1,13 +1,9 @@
-import React, {useState, useEffect }from 'react';
-import { img1, img2, img3 } from 'src/assets/images/pancil_drowing/'
+import React from 'react';
 
-document.getElementById('pancil-1').src = img1
-document.getElementById('pancil-2').src = img2
-document.getElementById('pancil-3').src = img3
 export default function PancilDrowing() {
     const imagesPancilDrowing = [
-        'src/assets/images/pancil_drowing/pancil-1.jpg',
-        'src/assets/images/pancil_drowing/pancil-2.jpg',
+        require('@/assets/images/pancil_drowing/pancil-1.jpg'),
+        require('@/assets/images/pancil_drowing/pancil-2.jpg'),
         'src/assets/images/pancil_drowing/pancil-3.jpg',
         'src/assets/images/pancil_drowing/pancil-4.jpg',
         'src/assets/images/pancil_drowing/pancil-6.jpg',
@@ -18,11 +14,6 @@ export default function PancilDrowing() {
         'src/assets/images/pancil_drowing/pancil-8.jpg',
     ];
 
-    const [pancilImages, setPancilImages] = useState([]);
-
-    useEffect(() => {
-        setPancilImages(imagesPancilDrowing);
-    }, []);
 
 
     return (
@@ -38,7 +29,7 @@ export default function PancilDrowing() {
                 <div className="juckets-images grid-images">
                     <ul className="images-group">
                         {
-                            pancilImages.map((e, index) => (
+                            imagesPancilDrowing.map((e, index) => (
                                 <li key={index} className="image-group">
                                     <img src={e} className="image-realizations" />
                                 </li>
