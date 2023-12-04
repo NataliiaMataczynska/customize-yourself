@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Pancil1 from "src/assets/images/pancil_drowing/pancil-1.jpg";
 export default function PancilDrowing() {
     const imagesPancilDrowing = [
-        require('@/assets/images/pancil_drowing/pancil-1.jpg'),
-        require('@/assets/images/pancil_drowing/pancil-2.jpg'),
+        Pancil1,
+        'src/assets/images/pancil_drowing/pancil-2.jpg',
         'src/assets/images/pancil_drowing/pancil-3.jpg',
         'src/assets/images/pancil_drowing/pancil-4.jpg',
         'src/assets/images/pancil_drowing/pancil-6.jpg',
@@ -13,8 +13,6 @@ export default function PancilDrowing() {
         'src/assets/images/pancil_drowing/pancil-5.jpg',
         'src/assets/images/pancil_drowing/pancil-8.jpg',
     ];
-
-
 
     return (
         <div className="juckets-container" >
