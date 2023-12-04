@@ -38,7 +38,8 @@ export default function PancilDrowing() {
                         {
                             imagesPancilDrowing.map((e, index) => (
                                 <li key={index} className="image-group">
-                                    <img src={e} className="image-realizations" />
+                                    <img src={e} alt={`Pancil Drawing ${index + 1}`} className="image-realizations" />
+
                                 </li>
                             ))
                         }
