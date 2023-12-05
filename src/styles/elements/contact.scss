@@ -33,18 +33,21 @@
       border-radius: 0.4rem;
       background: black;
       border: 1px solid #06a69d;
+      color: white;
+      font-size: 1.5rem;
     }
 
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-      background-color: #06a69d;;
+      background-color: #808080;
       color: white;
       border: none;
     }
     input[type="submit"]:hover {
       color:#ff007f;
       text-shadow: 0 0 10px #ff007f, 0 0 20px#ff007f, 0 0 40px #ff007f, 0 0 80px#ff007f;
+      background-color: #06a69d;
     }
   }
 }
@@ -55,7 +58,7 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  margin: 10rem;
+  margin-bottom: 8rem;
 
   section {
     display: flex;
@@ -109,4 +112,7 @@ section.active {
 
 section.active span {
   rotate: -180deg;
+}
+.message-send {
+  color: white;
 }

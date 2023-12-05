@@ -17,14 +17,14 @@ export default function PancilDrowing() {
         image4,
         image6,
         image7,
-        image9,
+        image8,
         image10,
         image5,
-        image8,
+        image9,
     ];
 
     return (
-        <div className="juckets-container" >
+        <div className="pencil-container" >
             <div className="jucketse-text">
                 <h1>Rysunek ołówkiem</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -32,9 +32,9 @@ export default function PancilDrowing() {
                 </p>
             </div>
 
-            <section className="juckets">
-                <div className="juckets-images grid-images">
-                    <ul className="images-group">
+            <section className="pencil">
+                <div className=" grid-images-pencil">
+                    <ul className="images-group-pencil">
                         {
                             imagesPancilDrowing.map((e, index) => (
                                 <li key={index} className="image-group">

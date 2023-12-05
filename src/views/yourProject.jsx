@@ -2,13 +2,20 @@ import React, { useState, useEffect } from 'react';
 import Display from './display.jsx';
 import Settings from './settings.jsx';
 import ImgUpload from "./imgUpload.jsx";
+import image1 from "../assets/images/home/02457A.jpg";
+import image2 from "../assets/images/home/D6E8EE.jpg";
+import image3 from "../assets/images/home/97CADB.jpg";
+import image4 from "../assets/images/home/018ABE.jpg";
+import image5 from "../assets/images/home/02457A.jpg";
+import image6 from "../assets/images/home/001B48.jpg";
+import image7 from "../assets/images/home/black.jpg";
 
 export default function YourProject() {
     const [displayState, setDisplayState] = useState({
         model: 'Damska',
         size: 'XS',
         delivery: 'Klient',
-        colorOfClothes: 'src/assets/images/home/02457A.jpg',
+        colorOfClothes: image1,
         upperText: '',
         url: '',
         textColor: 'black',
@@ -55,22 +62,22 @@ export default function YourProject() {
 
         switch (newColor) {
             case 'D6E8EE':
-                imageSrc = 'src/assets/images/home/D6E8EE.jpg';
+                imageSrc = image2;
                 break;
             case '97CADB':
-                imageSrc = 'src/assets/images/home/97CADB.jpg';
+                imageSrc = image3;
                 break;
             case '018ABE':
-                imageSrc = 'src/assets/images/home/018ABE.jpg';
+                imageSrc = image4;
                 break;
             case '02457A':
-                imageSrc = 'src/assets/images/home/02457A.jpg';
+                imageSrc = image5;
                 break;
             case '001B48':
-                imageSrc = 'src/assets/images/home/001B48.jpg';
+                imageSrc = image6;
                 break;
             default:
-                imageSrc = 'src/assets/images/home/black.jpg';
+                imageSrc = image7;
                 break;
         }
 
