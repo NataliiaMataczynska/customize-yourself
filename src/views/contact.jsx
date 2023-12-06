@@ -1,4 +1,4 @@
-import { useRef, useState} from 'react';
+import React, { useRef, useState} from 'react';
 import Questions from "../styles/elements/questions.jsx";
 import emailjs from '@emailjs/browser';
 
@@ -58,47 +58,44 @@ export default function Contact() {
     showMessageSent();
 
     return (
-        <div className="contact-container">
-            <div>
-                <div style={{color: "withe"}}>
+        <div className="contact-container" style={{display: "flex", justifyContent: "space-around", flexDirection: "row", alignItems: "flex-end"}}>
+            <div style={{marginTop: "5rem"}}>
+                <div style={{color: "withe", display: "flex", justifyContent: "space-between", flexDirection: "row", alignItems: "center", marginBottom: "5rem"}}>
                     <div>
                         <div>
-                            <div>
-                                <span> Adres:</span>
-                            </div>
-                            <div>
-                                <p>
-                                    <span> Adres:</span> 58-160 Świebodzice
+                            <div style={{display: "flex", justifyContent: "", flexDirection: "row", alignItems: "flex-end"}}>
+                                <p style={{fontSize: "1rem", color: "white"}}>
+                                  <span className="material-symbols-outlined">location_on</span>
+                                  <span style={{paddingRight: "6rem", marginLeft: "0.7rem"}}> Adres:</span> 58-160 Świebodzice
                                 </p>
                             </div>
                         </div>
                         <div>
-                            <div>
-                                <span> Telefon kontaktowy:</span>
-                            </div>
-                            <div>
-                                <p>
-                                    <span> Telefon kontaktowy:</span> +48 600 800 ***
+                            <div style={{display: "flex", justifyContent: "", flexDirection: "row", alignItems: "flex-end", lineHeight: "2rem"}}>
+                                <p style={{fontSize: "1rem", color: "white"}}>
+                                    <span className="material-symbols-outlined">call</span>
+                                    <span style={{width: "5rem", marginRight: "0.8rem", marginLeft: "0.7rem"}}>Telefon kontaktowy: </span>+48 600 800 ***
                                 </p>
                             </div>
                         </div>
                         <div>
-                            <div>
-                                <span> Email:</span>
-                                <a href="#">clayonboard@gmail.com</a>
+                            <div style={{display: "flex", justifyContent: "", flexDirection: "row", alignItems: "flex-end"}}>
+                                <p style={{fontSize: "1rem", color: "white"}}>
+                                  <span className="material-symbols-outlined">mail</span>
+                                  <span style={{width: "5rem", marginRight: "1rem", marginLeft: "0.7rem"}}>Email: </span><a href="#" style={{textDecoration: "none", color: "white"}}>clayonboard@gmail.com</a>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h4>Nas znajdziesz równiez na: </h4>
-                        <div>
+                    <div style={{display: "flex", justifyContent: "space-around", flexDirection: "column", alignItems: "center", lineHeight: "2rem", color: "white"}}>
+                        <div  style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                             <div>
-                                <span></span>
-                                <a href="https://instagram.com/clayonboard?igshid=OGQ5ZDc2ODk2ZA==">instagram.com</a>
+                                <img src="src/assets/images/home/instagram.jpg" alt="Instagram" style={{ width: "1.3rem", height: "1.3rem", marginRight: "0.7rem" }} />
+                                <a href="https://instagram.com/clayonboard?igshid=OGQ5ZDc2ODk2ZA==" style={{ color: "lightgray"}}>instagram.com</a>
                             </div>
                             <div>
-                                <span></span>
-                                <a href="https://www.tiktok.com/@clayonboard">@clayonboard</a>
+                                <img src="src/assets/images/home/tiktok.jpg" alt="Instagram" style={{ width: "1.3rem", height: "1.3rem", marginRight: "0.7rem", cursor: "pointer"}} />
+                                <a href="https://www.tiktok.com/@clayonboard" style={{ color: "lightgray", cursor: "pointer"}}>@clayonboard</a>
                             </div>
                         </div>
                     </div>

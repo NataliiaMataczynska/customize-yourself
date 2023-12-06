@@ -6,20 +6,17 @@ import PropTypes from 'prop-types';
 
 export default function Submenu(props) {
     const { handleDropdown } = props;
-    const closeDropdown = () => {
-        handleDropdown(false);
-    };
 
     return (
         <div>
             <ul className="submenu-items">
                 <li className="submenu-item">
-                    <Link to="/jackets" className="submenu-link" onClick={closeDropdown}>
+                    <Link to="/jackets" className="submenu-link" onClick={handleDropdown}>
                         Kurtki jeansowe
                     </Link>
                 </li>
                 <li className="submenu-item">
-                    <Link to="/realizacion/shoes" className="submenu-link">Buty</Link>
+                    <Link to="/shoes" className="submenu-link">Buty</Link>
                 </li>
                 <li className="submenu-item">
                     <Link to="/realizacion/figuries" className="submenu-link">Figurki</Link>
