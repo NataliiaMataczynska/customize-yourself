@@ -171,7 +171,9 @@ export default function Settings({
                         <span></span>
                     </div>
                 </div>
-                <button className="btn btn-primary">Zapisz i wyślij</button>
+                <div className="jacket-option" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <button className="btn btn-primary " style={{fontSize: "1.5rem", lineHeight: " 2rem", textAlign: "center", width: "100%", height: "100%", marginTop:"3rem"}}>Zapisz i wyślij</button>
+                </div>
             </div>
         </div>
 

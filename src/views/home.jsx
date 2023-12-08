@@ -61,11 +61,28 @@ export default function Home(){
 
 
     return (
-        <div className="text-efect home-container" >
-            <div className="home-text">
-                <h1>Strona główna</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Architecto debitis saepe sed! Ea, exercitationem similique.
+        <div className="text-efect home-container" style={{margin: "10 rem"}} >
+            <div className="home-text" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <p style={{width: "80%", fontSize: "1.5rem", lineHeight: "2rem"}}>
+                    Customizacja - dostosowanie czegoś do własnych potrzeb. A przynajmniej taką definicję podaję Słownik Języka Polskiego.<br />
+                    I tym właśnie się tutaj zajmujemy, z małą zmianą, że dostosowujemy „coś” do waszych potrzeb. <br />
+                    A czym jest to „coś”? Jest to szeroko pojęty zbiór rzeczy, które pod potrzeby klienta da się „customizować”. <br />
+                    A konkretniej, to malujemy głównie odzież i obuwie zgodnie z pomysłem i potrzebami danej osoby. <br />
+                    Najpopularniejsze realizacje to malowanie po butach, koszulkach, bluzach i kurtkach jeansowych. <br />
+                    Jednak nie zamykamy się na inne realizacje. Możemy także ulepić coś z gliny, malować po elementach stalowych, personalizować powierzchnie użytkowe, malować po ścianach, pomalować figurki z gier planszowych (i nie tylko), wykonać obraz farbami czy też ołówkiem. <br />
+                    Wszystko zależy od potrzeb.
+                </p>
+                <p style={{width: "80%", fontSize: "1.5rem", lineHeight: "2rem"}}>
+                    Jak to działa? <br />
+                    Jeśli chodzi o kurtki to uruchomiliśmy możliwość stworzenia własnego projektu na naszej stronie. Mamy nadzieję, że kreator jest dość łatwy w obsłudze i intuicyjny. <br />
+                    Po stworzeniu swojego projektu i naciśnięciu przycisku „zapisz i wyślij” zapytanie trafia do nas, a my indywidualnie wyceniamy projekt oraz w przeciągu 24h wysyłamy odpowiedź na takie zapytanie. <br />
+                    Dlaczego tylko kurtki? Bo ilość zapytań o nie była największa i od tego zaczęliśmy. Ale spokojnie, w kolejnych krokach planujemy dodać podobny kreator na buty, a ostatecznie także możliwość wgrania swojego produktu do „customizacji”. <br />
+                    A póki nie rozwiniemy się bardziej w kwestii kreatora, to wszystkie pozostałe zapytania można kierować przez formularz kontaktowy, pod adres e-mail lub bezpośrednio pisać do nas na naszych mediach społecznościowych. <br />
+                    Wszystko jest podane w zakładce „Kontakt”.
+                </p>
+                <p>
+                    Dziękujemy, że jesteście tutaj z nami! <br />
+                    Miłego „Customizowania”!
                 </p>
             </div>
         {/*    <span style={{ fontWeight: 'bold', color: 'black', fontSize: '2rem' }}>*/}

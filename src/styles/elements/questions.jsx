@@ -18,7 +18,7 @@ export default function Questions(props) {
                      : {height: "0px"}
                  }
             >
-                <p>{text}</p>
+                <p ref={(el) => { if (el) { el.innerText = text; } }}></p>
             </div>
         </>
     );
