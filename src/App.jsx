@@ -11,6 +11,8 @@ import Footer from "./views/footer.jsx";
 import Jackets from "./components/jackets.jsx";
 import PancilDrowing from "./components/pancilDrowing.jsx";
 import Shoes from "./components/shoes.jsx";
+import Figuries from "./components/figuries.jsx";
+import Other from "./components/other.jsx";
 
 export default function App() {
     return (
@@ -22,7 +24,9 @@ export default function App() {
                     <Route path="/project" element={<YourProject />} />
                     <Route path="/jackets" element={<Jackets />} />
                     <Route path="/shoes" element={<Shoes />} />
+                    <Route path="/figuries" element={<Figuries />} />
                     <Route path="/pancildrowing" element={<PancilDrowing />} />
+                    <Route path="/other" element={<Other />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <Footer />

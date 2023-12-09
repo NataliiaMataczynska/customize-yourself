@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import image1 from "../assets/images/rotate-left.png";
+import image2 from "../assets/images/rotate-right.png";
 
 export default function Settings({
                                      handleChangeOptions,
@@ -87,10 +89,10 @@ export default function Settings({
                     <h4>Obróć zdjęcie</h4>
                     <div>
                         <button onClick={rotateLeftImg} style={{
-                            background: `url("src/assets/images/rotate-left.png") no-repeat`,
+                            background: `url(${image1}) no-repeat`,
                             backgroundSize: 'cover', width: '2rem', height: '2rem' }}></button>
                         <button onClick={rotateRightImg} style={{
-                            background: `url("src/assets/images/rotate-right.png") no-repeat`,
+                            background: `url(${image2}) no-repeat`,
                             backgroundSize: 'cover',width: '2rem', height: '2rem' }}></button>
                     </div>
                 </div>
@@ -135,7 +137,7 @@ export default function Settings({
                 <div className="jacket-option">
                     <h4 >Color tekstu</h4>
                     <select onChange={textColor} className="form-control ">
-                        <option value="white">withe</option>
+                        <option value="white">white</option>
                         <option value="black">black</option>
                         <option value="red">red</option>
                         <option value="blue">blue</option>
@@ -145,10 +147,10 @@ export default function Settings({
                     <h4>Obróć tekst</h4>
                     <div>
                         <button onClick={rotateLeft} style={{
-                            background: `url("src/assets/images/rotate-left.png") no-repeat`,
+                            background: `url(${image1}) no-repeat`,
                             backgroundSize: 'cover', width: '2rem', height: '2rem' }}></button>
                         <button onClick={rotateRight} style={{
-                            background: `url("src/assets/images/rotate-right.png") no-repeat`,
+                            background: `url(${image2}) no-repeat`,
                             backgroundSize: 'cover',width: '2rem', height: '2rem' }}></button>
                     </div>
                 </div>
