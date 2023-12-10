@@ -137,10 +137,10 @@ export default function Settings({
                 <div className="jacket-option">
                     <h4 >Color tekstu</h4>
                     <select onChange={textColor} className="form-control ">
-                        <option value="white">white</option>
-                        <option value="black">black</option>
-                        <option value="red">red</option>
-                        <option value="blue">blue</option>
+                        <option value="black">czarny</option>
+                        <option value="white">biały</option>
+                        <option value="red">czerwony</option>
+                        <option value="blue">niebieski</option>
                     </select>
                 </div>
                 <div className="jacket-option">

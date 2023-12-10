@@ -147,7 +147,7 @@ export default function YourProject() {
         setTextState(prevState => ({ ...prevState, left: parseInt(prevState.left) - 10 }));
     };
     const moveRight = () => {
-        setTextState(prevState => ({ ...prevState, left: parseInt(prevState.left) - 10 }));
+        setTextState(prevState => ({ ...prevState, left: parseInt(prevState.left) + 10 }));
     };
 
     const moveUpImg = () => {
