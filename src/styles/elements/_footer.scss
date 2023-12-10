@@ -1,18 +1,17 @@
 .footer-container {
-  height: 15vh;
+  height: 100%;
   background: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
   .footer-row {
     display: flex;
-    width: 60vw;
+    width: 80%;
     justify-content: space-around;
     margin-right: 2rem;
     .footer-col {
       display: flex;
       list-style: none;
-      width: 60vw;
       margin-right: 2rem;
       margin-left: 2rem;
       .list {
